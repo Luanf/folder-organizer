@@ -17,7 +17,7 @@ DOCS="pdf|ppt|doc"
 ARCHIVE="zip|tgz"
 CODE="c|py|java"
 IMAGE="jpg|jpeg|png|gif"
-MULTIMEDIA="mp3|mp4"
+MULTIMEDIA="mp3|mp4|srt"
 INSTALLER="dmg"
 WEB="html"
 
