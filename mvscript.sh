@@ -1,6 +1,17 @@
 #!/bin/sh
 #
 
+
+SOURCE_DIR="$HOME/Downloads/"
+TEXT_DIR=$SOURCE_DIR"Texts"
+DOCS_DIR=$SOURCE_DIR"Docs"
+ARCHIVE_DIR=$SOURCE_DIR"Archives"
+CODE_DIR=$SOURCE_DIR"Codes"
+IMAGE_DIR=$SOURCE_DIR"Images"
+MULTIMEDIA_DIR=$SOURCE_DIR"Multimedia"
+INSTALLER_DIR=$SOURCE_DIR"Installer"
+WEB_DIR=$SOURCE_DIR="Web"
+
 SIMPLE_TEXT="txt|md"
 DOCS="pdf|ppt|doc|"
 ARCHIVE="zip|tgz"
@@ -10,7 +21,7 @@ MULTIMEDIA="mp3|mp4"
 INSTALLER="dmg"
 WEB="html"
 
-for file in ~/Downloads/*
+for file in $SOURCE_DIR*
 do
 	if [[ $file =~ .*\.($SIMPLE_TEXT) ]]; then
 		echo "Simple Text file moved: "$file 
