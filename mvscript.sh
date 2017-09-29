@@ -20,6 +20,7 @@ IMAGE="jpg|jpeg|png|gif"
 MULTIMEDIA="mp3|mp4|srt"
 INSTALLER="dmg"
 WEB="html"
+DO_NOTHING="crdownload|CRDOWNLOAD|download|DOWNLOAD"
 
 for file in $SOURCE_DIR*
 do
@@ -30,7 +31,9 @@ do
 	#echo "BASENAME = ""$BASENAME"
 	#echo "EXTENSION = ""$EXT"
 	INDEX=0
-	if [[ $file =~ .*\.($SIMPLE_TEXT) ]]; then
+	if [[ $file =~ .*\.*\.($DO_NOTHING) ]]; then
+		continue
+	elif [[ $file =~ .*\.($SIMPLE_TEXT) ]]; then
 		DEST_DIR="$TEXT_DIR"
 	elif [[ $file =~ .*\.($DOCS) ]]; then
 		DEST_DIR="$DOCS_DIR"
